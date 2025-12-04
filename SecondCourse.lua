@@ -2,9 +2,9 @@
 
 SLASH_HELLO1 = "/hello"
 SlashCmdList["HELLO"] = function(msg)
-    if msg and msg ~= "" then
+    if msg == "" then
         print("Hello world", msg)
     else
-        print("You should provide a name.")
+        print("You didnt type it correctly")
     end
 end
