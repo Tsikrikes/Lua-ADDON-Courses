@@ -1,8 +1,9 @@
 ## Interface: 12314
-## Title: TestAddon
+## Title: LuaCourses
 ## Author: Dokusen
 ## Vesion: 3.3.5
 
 FirstCourse.lua
 SecondCourse.lua
 ThirdCourse.lua
+FourthCourse.lua

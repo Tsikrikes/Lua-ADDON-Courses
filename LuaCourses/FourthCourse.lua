@@ -1,0 +1,6 @@
+local login = CreateFrame("Frame")
+login:RegisterEvent("PLAYER_LOGIN")
+login:SetScript("OnEvent", function(self, event, ...)
+      local characterName = UnitName("player")
+      print(characterName)
+end)
