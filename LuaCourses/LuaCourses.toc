@@ -1,14 +1,7 @@
-<<<<<<< HEAD
 ## Interface: 12340
 ## Title: LuaCourses
 ## Author: Dokusen
 ## Version: 3.3.5  
-=======
-## Interface: 12314
-## Title: LuaCourses
-## Author: Dokusen
-## Vesion: 3.3.5
->>>>>>> eba3e5743dc48c1b5c368a41b069c9ce2ad0d0ef
 
 FirstCourse.lua
 SecondCourse.lua
