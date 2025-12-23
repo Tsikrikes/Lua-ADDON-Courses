@@ -44,111 +44,112 @@
 
 -- ΤΕΣΤ 3 --
 
--- local f = CreateFrame("Frame")
+local f = CreateFrame("Frame")
 
--- f:RegisterEvent("PLAYER_LOGIN")
--- f:SetScript("OnEvent", function ()
---     local localizedClassName,class = UnitClass("player") -- Η UnitClass επιστρεφει παντα 2 τιμες
---     if localizedClassName and (class  == "MAGE") then
---         print("Master of the Arcane!")
---     else
---         print("Welcome adventurer!")
---     end
--- end)
+f:RegisterEvent("PLAYER_LOGIN")
+f:SetScript("OnEvent", function ()
+    local localizedClassName,class = UnitClass("player") -- Η UnitClass επιστρεφει παντα 2 τιμες
+    if localizedClassName and (class  == "MAGE") then
+        print("Master of the Arcane!")
+    else
+        print("Welcome adventurer!")
+    end
+end)
 
 -- -- ΤΕΣΤ 4 --
 
--- local f = CreateFrame("Frame")
+local f = CreateFrame("Frame")
 
--- f:RegisterEvent("PLAYER_REGEN_DISABLED")
--- f:SetScript("OnEvent", function ()
---     print("Combat Started!")
--- end)
+f:RegisterEvent("PLAYER_REGEN_DISABLED")
+f:SetScript("OnEvent", function ()
+    print("Combat Started!")
+end)
 
 -- -- ΤΕΣΤ 5 --
 
--- local f = CreateFrame("Frame")
--- local combatCount = 0
+local f = CreateFrame("Frame")
+local combatCount = 0
 
--- f:RegisterEvent("PLAYER_REGEN_DISABLED")
--- f:RegisterEvent("PLAYER_REGEN_ENABLED")
--- f:SetScript("OnEvent", function (self, event)
---     combatCount = combatCount + 1
---     outCombat = outCombat + 1
---     if event == "PLAYER_REGEN_DISABLED" then
---         print("Combat Started!" .. combatCount)
---     else if event == "PLAYER_REGEN_ENABLED" then
---         print("You are out of Combat")
---     end
--- end)
+f:RegisterEvent("PLAYER_REGEN_DISABLED")
+f:RegisterEvent("PLAYER_REGEN_ENABLED")
+f:SetScript("OnEvent", function (self, event)
+    combatCount = combatCount + 1
+    outCombat = outCombat + 1
+    if event == "PLAYER_REGEN_DISABLED" then
+        print("Combat Started!" .. combatCount)
+    else if event == "PLAYER_REGEN_ENABLED" then
+        print("You are out of Combat")
+    end
+end)
 
 
 -- ΤΕΣΤ 6 -- 
 
 
--- if not login then
---     login = 0
--- end
+if not login then
+    login = 0
+end
 
--- local f = CreateFrame("Frame")
+local f = CreateFrame("Frame")
 
--- f:RegisterEvent("PLAYER_LOGIN")
--- f:SetScript("OnEvent", function (self, event)
---     login = login + 1
---     if event == "PLAYER_LOGIN" then
---         print("you have logged in " .. login .. " times!")
---     end
--- end)
+f:RegisterEvent("PLAYER_LOGIN")
+f:SetScript("OnEvent", function (self, event)
+    login = login + 1
+    if event == "PLAYER_LOGIN" then
+        print("you have logged in " .. login .. " times!")
+    end
+end)
 
 -- -- TOC --
 
--- ##SavedVariables : login
+##SavedVariables : login
 
 
 -- -- ΤΕΣΤ 7 --
 
--- local frame = CreateFrame("Frame")
--- local mounts = {"Horse", "Tiger", "Dragon"}
+local frame = CreateFrame("Frame")
+local mounts = {"Horse", "Tiger", "Dragon"}
 
--- frame:RegisterEvent("PLAYER_LOGIN")
--- frame:SetScript("OnEvent", function (self, event)
---     if event == "PLAYER_LOGIN" then
---         for i, mount in ipairs(mounts) do
---             print(i .. ". " .. mount)
---         end
---     end
--- end)
+frame:RegisterEvent("PLAYER_LOGIN")
+frame:SetScript("OnEvent", function (self, event)
+    if event == "PLAYER_LOGIN" then
+        for i, mount in ipairs(mounts) do
+            print(i .. ". " .. mount)
+        end
+    end
+end)
 
 -- ΤΕΣΤ 4-5-7 ΜΑΖΙ --
 
--- if not login then
---     login = 0
--- end
--- local f = CreateFrame("Frame")
--- local combatCount = 0
--- local mounts = {"Horse","Tiger","Dragon"}
--- f:RegisterEvent("PLAYER_LOGIN")
--- f:RegisterEvent("PLAYER_REGEN_DISABLED")
--- f:RegisterEvent("PLAYER_REGEN_ENABLED")
--- f:SetScript("OnEvent", function (self, event)
---     if event == "PLAYER_LOGIN" then
---         login = login + 1
---         print("You logged in " .. login .. " times!")
---         for i,mount in ipairs(mounts) do
---         print(i .. ". " .. mount)
---         end
---     elseif event == "PLAYER_REGEN_DISABLED" then
---         combatCount = combatCount + 1
---         print("You are in Combat " .. combatCount .. " times!")
---     elseif event == "PLAYER_REGEN_ENABLED" then
---         print("You are out of Combat!")
---     end
--- end)
+if not login then
+    login = 0
+end
+local f = CreateFrame("Frame")
+local combatCount = 0
+local mounts = {"Horse","Tiger","Dragon"}
+f:RegisterEvent("PLAYER_LOGIN")
+f:RegisterEvent("PLAYER_REGEN_DISABLED")
+f:RegisterEvent("PLAYER_REGEN_ENABLED")
+f:SetScript("OnEvent", function (self, event)
+    if event == "PLAYER_LOGIN" then
+        login = login + 1
+        print("You logged in " .. login .. " times!")
+        for i,mount in ipairs(mounts) do
+        print(i .. ". " .. mount)
+        end
+    elseif event == "PLAYER_REGEN_DISABLED" then
+        combatCount = combatCount + 1
+        print("You are in Combat " .. combatCount .. " times!")
+    elseif event == "PLAYER_REGEN_ENABLED" then
+        print("You are out of Combat!")
+    end
+end)
 
 -- -- TOC FILES -- 
 
--- ## Interface: 11302
--- ## Title: Login Counter
--- ## Author: You
--- ## SavedVariables: login
--- LoginCounter.lua
+## Interface: 11302
+## Title: Login Counter
+## Author: You
+## SavedVariables: login
+LoginCounter.lua
+
